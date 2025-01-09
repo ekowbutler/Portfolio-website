@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fcfcfc;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header h1 img {
+    max-height: 200px;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+h2,
+h3 {
+    text-align: center;
+    color: #396660;
+    background: linear-gradient(45deg, #415f8b, #00ccff);
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 20px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+h2:hover,
+h3:hover {
+    transform: scale(1.05);
+    border-color: #fff;
+}
+
+/* Fullscreen Mode for h3 */
+h3.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    color: #000000;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.fullscreen-content {
+    position: fixed;
+    top: 100px;
+    /* Below the expanded h3 */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    color: #000000;
+    overflow: auto;
+    padding: 20px;
+    z-index: 999;
+}
+
+/* Paragraphs and Lists */
+p,
+ul,
+ol,
+address {
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+/* Profile Picture */
+.profile-picture {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    max-width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slideshow-container img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: hsl(0, 7%, 94%);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Address */
+address,a{
+    font-style: normal;
+    text-align: center;
+    color: hsla(0, 0%, 97%, 0.932);
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+/* Buttons for the Slideshow */
+.slideshow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+.slideshow-button.left {
+    left: 10px;
+}
+
+.slideshow-button.right {
+    right: 10px;
+}
+
+.slideshow-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Default Hidden State for Fullscreen Content */
+.fullscreen-content {
+    display: none;
+    /* Initially hidden */
+}
+
+/* Visible State for Fullscreen Content */
+h3.fullscreen+.fullscreen-content {
+    display: block;
+    /* Show content when h3 is fullscreen */
+}
